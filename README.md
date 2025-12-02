@@ -1,8 +1,17 @@
-# EmailAppointmentPlanner
-This is a simple email appointment scheduler that makes things easier for you. Why?
+# PHP Email-based Appointment Workflow
 
-You just need to call the PHP file when a form is submitted.
+This is a lightweight, automated appointment management system in PHP.
 
-The script then offers the appointment from the form to the recipient, who can accept, decline, or refuse. It also offers another appointment via an internal HTML form, which can be accepted or declined, all via email.
+It handles the full workflow by email:
 
-Coming soon!
+- A client submits an appointment request via a form.
+- The recipient (coach, business owner, etc.) receives an email and can:
+  - accept the requested time,
+  - decline it,
+  - or refuse it and propose a new time slot via an internal HTML form.
+- The client then receives a follow-up email and can accept or decline the new time slot.
+- Each step is secured with tokens and tracked via simple JSON files.
+
+You just need to call the main PHP endpoint when a form is submitted - the rest of the logic (tokens, validation, rescheduling and emails) is handled for you.
+
+More detailed documentation and examples coming soon.
